@@ -12,10 +12,10 @@ ulEl.addEventListener('click', removeNote)
 resetButton.addEventListener('click', clearAll)
 
 function clearAll(e) {
-  const liElements = document.querySelectorAll('li');
-  liElements.forEach(element => {
-    element.innerText = '';
-  })
+  // const liElements = document.querySelector('li');
+  while (ulEl.firstChild) {
+    ulEl.removeChild(ulEl.firstChild);
+  }
 }
 
 function removeNote(e) {
