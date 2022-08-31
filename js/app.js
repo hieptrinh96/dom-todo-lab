@@ -11,8 +11,8 @@ ulEl.addEventListener('click', removeNote)
 
 resetButton.addEventListener('click', clearAll)
 
+// create functions that houses the code
 function clearAll(e) {
-  // const liElements = document.querySelector('li');
   while (ulEl.firstChild) {
     ulEl.removeChild(ulEl.firstChild);
   }
@@ -21,8 +21,6 @@ function clearAll(e) {
 function removeNote(e) {
   return e.target.remove();
 }
-
-
 
 function noteCreator(e) {
   const liElement = document.createElement('li');
